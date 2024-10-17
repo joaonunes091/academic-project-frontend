@@ -1,0 +1,32 @@
+body {
+    background-color: #343a40; /* Dark background */
+    color: white; /* White text */
+}
+
+nav {
+    background-color: #495057; /* Darker navbar */
+    padding: 10px;
+}
+
+nav a {
+    color: #f8f9fa !important; /* Lighter grey for unselected links */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding inside the box */
+    margin: 5px; /* Add margin around the box */
+    border: 1px solid transparent; /* Set transparent border initially */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #ffffff; /* Change to white on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    border-color: #ffffff; /* White border on hover */
+}
+
+nav a.active {
+    font-weight: bold; /* Highlight active link */
+    color: #ffffff; /* White for active link */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background for active link */
+    border-color: #ffffff; /* White border for active link */
+}
