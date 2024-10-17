@@ -1,0 +1,12 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.table td {
+    vertical-align: middle; /* Aligns the icons in the center */
+}
+
+.table i {
+    margin: 0 5px; /* Adds some spacing between icons */
+    font-size: 1.5rem; /* Adjusts the size of the icons */
+}

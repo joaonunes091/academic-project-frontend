@@ -1,0 +1,30 @@
+<div class="container mt-3">
+    <h3>Secção Administrador</h3>
+  
+    <!-- Tabs navigation -->
+    <ul class="nav nav-tabs" id="adminTabs">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab === 'cursos'" (click)="selectTab('cursos')" role="tab">
+          Cursos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="activeTab === 'settings'" (click)="selectTab('settings')" role="tab">
+          Settings
+        </a>
+      </li>
+    </ul>
+  
+    <!-- Tabs content -->
+    <div class="tab-content mt-3">
+      <!-- Cursos tab content -->
+      <div class="tab-pane fade" [class.show]="activeTab === 'cursos'" [class.active]="activeTab === 'cursos'">
+        <app-cursos></app-cursos>
+      </div>
+  
+      <!-- Settings tab content -->
+      <div class="tab-pane fade" [class.show]="activeTab === 'settings'" [class.active]="activeTab === 'settings'">
+        <p>Settings content goes here...</p>
+      </div>
+    </div>
+  </div>

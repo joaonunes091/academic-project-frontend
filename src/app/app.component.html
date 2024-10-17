@@ -2,12 +2,27 @@
   <a class="navbar-brand" href="#">Gestão de Pontos</a>
   <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active">Home</a>
+        </li>
           <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/rondas']" routerLinkActive="active">Rondas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="active">Administrador</a>
+          </li>
+<!--           <li class="nav-item">
               <a class="nav-link" [routerLink]="['/items']" routerLinkActive="active">Item List</a>
           </li>
           <li class="nav-item">
               <a class="nav-link" [routerLink]="['/add-item']" routerLinkActive="active">Add Item</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/cursos']" routerLinkActive="active">Ver Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/add-cursos']" routerLinkActive="active">Adicionar Cursos</a>
+        </li> -->
       </ul>
   </div>
 </nav>

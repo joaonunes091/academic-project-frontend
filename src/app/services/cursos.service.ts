@@ -3,28 +3,31 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environment/environment'
 
-export interface Item {
+export interface Curso {
   id?: string;
   name: string;
-  quantity: number;
 }
 
 @Injectable({
   providedIn: 'root'
 })
-export class ItemService {
+export class CursosService {
   
-  apiUrl = `${environment.apiUrl}/items`;
+  apiUrl = `${environment.apiUrl}/cursos`;
 
   constructor(private http: HttpClient) { }
 
-  getItems(): Observable<Item[]> {
-    return this.http.get<Item[]>(this.apiUrl);
+  getCursos(): Observable<Curso[]> {
+    return this.http.get<Curso[]>(this.apiUrl);
   }
 
-  addItem(item: Item): Observable<Item> {
+  addCurso(curso: Curso): Observable<Curso> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<Item>(this.apiUrl, item, { headers });
+    return this.http.post<Curso>(this.apiUrl, curso, { headers });
   }
+
+  deleteCurso(id: string): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  } 
 
 }

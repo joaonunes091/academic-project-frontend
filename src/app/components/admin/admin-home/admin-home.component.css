@@ -1,0 +1,10 @@
+.nav-tabs .nav-link {
+    cursor: pointer;
+}
+/* Custom styles for inactive tabs */
+.nav-link.inactive-tab {
+    color: #6c757d; /* Bootstrap's gray color for text */
+    background-color: transparent; /* Make sure the background is transparent */
+    border: none; /* Remove borders for inactive tabs */
+    pointer-events: none; /* Optional: Prevent clicks on inactive tabs */
+}

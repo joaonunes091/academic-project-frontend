@@ -1,0 +1,28 @@
+<div class="container mt-3">
+    <h3>Gestão dos Cursos</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Curso</th>
+                <th scope="col">Eliminar Curso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let curso of cursos">
+                <td>{{ curso.name }}</td>
+                <td>
+                    <i class="fas fa-trash-alt text-danger cursor-pointer" (click)="deleteCurso(curso.id)" title="Eliminar"></i>
+                </td>
+            </tr>
+            <!-- New row for adding a new curso -->
+            <tr>
+                <td>
+                    <input type="text" [(ngModel)]="curso.name" class="form-control" placeholder="Adicionar Novo Curso" />
+                </td>
+                <td>
+                    <i class="fa-solid fa-plus text-primary cursor-pointer" (click)="addCurso()" title="Adicionar Curso"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
